@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import '../styles/Register.css'; // Import the CSS file for Register component
+
 
 const Register = () => {
   const [formData, setFormData] = useState({

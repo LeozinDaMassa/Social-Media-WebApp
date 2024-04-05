@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
+import '../styles/Login.css'; // Import the CSS file for Login component
 
 const Login = () => {
   const [formData, setFormData] = useState({
@@ -24,7 +26,7 @@ const Login = () => {
   };
 
   return (
-    <div>
+    <div className="login-container">
       <h2>Login</h2>
       <form onSubmit={handleSubmit}>
         <input
@@ -43,6 +45,7 @@ const Login = () => {
         />
         <button type="submit">Login</button>
       </form>
+      <p>Don't have an account? <Link to="/register">Register</Link></p> {/* Add Link to Register Page */}
     </div>
   );
 };
